@@ -3,7 +3,7 @@ import Title from "./Title";
 import "./App.css";
 import { motion } from "framer-motion";
 import Recipe from "./Recipe";
-
+import Footer from "./Footer";
 
 const buttonVariants = {
   hover: {
@@ -48,7 +48,7 @@ const App = () => {
   };
 
   return (
-  <motion.div className="App">
+    <motion.div className="App">
       <div className="image-r">
         <Title />
       </div>
@@ -59,9 +59,12 @@ const App = () => {
           value={search}
           onChange={updateSearch}
         />
-        <motion.button  variants={buttonVariants}
+        <motion.button
+          variants={buttonVariants}
           whileHover="hover"
-          className="search-button" type="submit">
+          className="search-button"
+          type="submit"
+        >
           Search
         </motion.button>
       </form>
@@ -76,6 +79,7 @@ const App = () => {
         ))}
         ;
       </div>
+      <Footer />
     </motion.div>
   );
 };
